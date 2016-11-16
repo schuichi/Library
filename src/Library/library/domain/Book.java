@@ -9,7 +9,40 @@ public class Book {
     private String autor;
     private int pages;
 
+    public Book(int id, String title, String autor, int pages) {
+        this.id = id;
+        this.title = title;
+        this.autor = autor;
+        this.pages = pages;
+    }
 
+    public Book(String title, String autor) {
+        this.title = title;
+        this.autor = autor;
+    }
+
+    public Book(int id, String title, String autor) {
+
+        this.id = id;
+        this.title = title;
+        this.autor = autor;
+    }
+
+    public Book(String title, String autor, int pages) {
+        this.title = title;
+        this.autor = autor;
+        this.pages = pages;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", autor='" + autor + '\'' +
+                ", pages=" + pages +
+                '}';
+    }
 
     public int getId() {
         return id;
