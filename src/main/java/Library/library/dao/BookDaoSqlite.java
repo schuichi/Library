@@ -37,7 +37,9 @@ public class BookDaoSqlite implements BookDao {
             System.out.println("Nie udało się wykonać SQL "+e.getMessage());
         }
     }
-
+public static void main(String[] args){
+    BookDaoSqlite bookDaoSqlite = new BookDaoSqlite();
+}
 
     @Override
     public void Book(Book book) {
