@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65824ccc-d331-46fe-91b5-29d8772f6fc1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Library/library/dao/BookDao.java" afterPath="$PROJECT_DIR$/src/main/java/Library/library/dao/BookDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Library/library/dao/BookDaoSqlite.java" afterPath="$PROJECT_DIR$/src/main/java/Library/library/dao/BookDaoSqlite.java" />
-    </list>
+    <list default="true" id="65824ccc-d331-46fe-91b5-29d8772f6fc1" name="Default" comment="" />
     <ignored path="Library.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
