@@ -13,49 +13,50 @@ import java.util.List;
 public class BookDaoSqlite implements BookDao {
     private Connection connection;
 
-    public BookDaoSqlite(){
-        try{
+    public BookDaoSqlite() {
+        try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:library.db");
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-        private void createTable(){
-            String sql = "CREATE TABLE IF NOT EXIST Books("
-                    +"id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    +"title TEXT, "
-                    +"author TEXT, "
-                    +"pages INTEGER "
-                    +");";
-        try{
+
+    private void createTable() {
+        String sql = "CREATE TABLE IF NOT EXIST Books("
+                + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + "title TEXT, "
+                + "author TEXT, "
+                + "pages INTEGER "
+                + ");";
+        try {
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
-        }
-        catch (SQLException e){
-            System.out.println("Nie udało się wykonać SQL "+e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("Nie udało się wykonać SQL " + e.getMessage());
         }
     }
-public static void main(String[] args){
-    BookDaoSqlite bookDaoSqlite = new BookDaoSqlite();
 
-
-}
-
-    @Override
-    public void Book(Book book) {
+    public static void main(String[] args) {
+        BookDaoSqlite bookDaoSqlite = new BookDaoSqlite();
+        bookDaoSqlite.addBook(new Book("Pozytywne Myslenie", "Brian Tracy", 250));
 
 
     }
 
-    @Override
+    public void addBook(Book book) {
+
+        String sql = "INSERT INTO Books(title, author, pages)"
+                +"VALUES ('"+book.getTitle()+"',' "+book.getAutor()+"', "+book.getPages()+")";
+
+
+    }
     public void removeBook(Book book) {
 
     }
 
-    @Override
     public List<Book> getAllBook() {
         return null;
     }
 }
+

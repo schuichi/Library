@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Tomek on 2016-11-16.
  */
 public interface BookDao {
-    void Book(Book book);
+    void addBook(Book book);
     void removeBook(Book book);
     List<Book>getAllBook();
 }
