@@ -39,6 +39,8 @@ public class BookDaoSqlite implements BookDao {
     }
 public static void main(String[] args){
     BookDaoSqlite bookDaoSqlite = new BookDaoSqlite();
+
+
 }
 
     @Override
